@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main class="py-5 position-relative">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="py-3 display-3 text-center">Bookmarker</h1>
+
+            <div
+                class="bookmarker-body  p-3 py-4 mt-5 d-flex flex-column gap-4 justify-content-center align-items-center w-100">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name</label>
+                    <input type="text" placeholder="Bookmark Name" class="form-control" id="bookmarkName" />
+                </div>
+
+                <div class="site-url w-100 d-flex flex-column justify-content-center">
+                    <label for="bookmarkURL" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                    <input type="url" placeholder="Website URL" class="form-control" id="bookmarkURL" />
+                </div>
+
+                <button class="btn btn-submit px-5 fs-6" id="submitBtn">Submit</button>
+            </div>
+
+            <table class="table bg-light mt-4 text-center ">
+                <thead>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+
+
+            <div
+                class="table-info start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center position-absolute d-none">
+                <div class="table-conent bg-white p-4 shadow-lg rounded-2">
+                    <header class="table-header w-100 d-flex justify-content-between align-items-center mb-4">
+                        <div class="circles d-flex">
+                            <span class="rounded-circle me-1"></span>
+                            <span class="rounded-circle me-1"></span>
+                            <span class="rounded-circle me-1"></span>
+                        </div>
+                        <button class="btn border-0" id="closeBtn">
+                            <i class="fa-solid fa-xmark close fs-3"></i>
+                        </button>
+                    </header>
+                    <p class="m-0 pb-2">
+                        Site Name or Url is not valid, Please follow the rules below :
+                    </p>
+                    <ol class="rules m-0  list-unstyled">
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>Site name must
+                            contain at least 3 characters
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+                            valid one
+                        </li>
+                    </ol>
+                </div>
+            </div>
+    </main>
+    <script src="./js/Bookmark.js"></script>
+</body>
+
+</html>
